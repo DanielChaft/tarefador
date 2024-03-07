@@ -40,7 +40,8 @@ export class TaskService {
     }
   }
 
-  private saveToLocalStorage() {
+  // alterado de private para public
+  public saveToLocalStorage() {
     const tasksJSON = JSON.stringify(this.tasks);
     localStorage.setItem('tasks', tasksJSON);
   }

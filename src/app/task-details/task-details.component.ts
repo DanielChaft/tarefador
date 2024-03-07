@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TaskService } from '../services/task.service';
 import { Task } from '../models/task';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-task-details',
@@ -32,7 +32,7 @@ export class TaskDetailsComponent {
   }
 
   save() {
-    this.taskService.updateTasks();
+    this.taskService.saveToLocalStorage(); // Alterado de updateTasks para saveToLocalStorage e definir para publico
     this.navigateBack();
   }
 
