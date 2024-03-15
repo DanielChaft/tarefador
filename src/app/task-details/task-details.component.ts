@@ -32,7 +32,7 @@ export class TaskDetailsComponent {
   }
 
   save() {
-    this.taskService.saveToLocalStorage(); // Alterado de updateTasks para saveToLocalStorage e definir para publico
+    this.taskService.updateTasks();
     this.navigateBack();
   }
 

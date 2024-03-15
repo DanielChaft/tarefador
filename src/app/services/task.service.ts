@@ -5,8 +5,7 @@ import { Task } from '../models/task';
   providedIn: 'root'
 })
 export class TaskService {
-  updateTasks: any;
-
+  
   constructor() { }
 
   private tasks: Array<Task> = [];
@@ -27,7 +26,7 @@ export class TaskService {
     this.saveToLocalStorage();
   }
 
-  updateTask() {
+  updateTasks() {
     this.saveToLocalStorage();
   }
 
@@ -40,8 +39,7 @@ export class TaskService {
     }
   }
 
-  // alterado de private para public
-  public saveToLocalStorage() {
+  private saveToLocalStorage() {
     const tasksJSON = JSON.stringify(this.tasks);
     localStorage.setItem('tasks', tasksJSON);
   }
